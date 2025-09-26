@@ -1,12 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import ChooseSection from '@/components/ChooseSection';
+import PromoBanner from '@/components/PromoBanner';
+import HeritageSection from '@/components/HeritageSection';
+import CampaignsSection from '@/components/CampaignsSection';
+import ChargingSection from '@/components/ChargingSection';
+import FAQSection from '@/components/FAQSection';
+import Footer from '@/components/Footer';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Index = () => {
+  useScrollAnimation();
+
+  useEffect(() => {
+    // Update page title and meta for SEO
+    document.title = 'BMW - Premium Vehicles & Innovation | Official BMW Website';
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Discover the BMW range: luxury cars, SUVs, and electric vehicles. Experience premium German engineering, innovative technology, and exceptional performance. Configure your BMW today.');
+    }
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <ChooseSection />
+        <PromoBanner />
+        <HeritageSection />
+        <CampaignsSection />
+        <ChargingSection />
+        <FAQSection />
+      </main>
+      <Footer />
     </div>
   );
 };
