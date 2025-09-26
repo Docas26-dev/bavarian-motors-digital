@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // BMW Specific Colors
+        "text-primary": "hsl(var(--text-primary))",
+        "text-muted": "hsl(var(--text-muted))",
+        "bmw-brand-blue": "hsl(var(--bmw-brand-blue))",
+        "bmw-accent-blue": "hsl(var(--bmw-accent-blue))",
+        "bmw-muted-gray": "hsl(var(--bmw-muted-gray))",
       },
       borderRadius: {
         lg: "var(--radius)",
