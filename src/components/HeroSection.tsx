@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/bmw-m4-hero.jpg';
-import sideImage from '@/assets/bmw-m4-side.jpg';
 
 const HeroSection = () => {
   return (
@@ -14,9 +13,9 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 bmw-container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-32">
-          {/* Left Content */}
-          <div className="text-white space-y-8">
+        <div className="flex items-center min-h-screen py-32">
+          {/* Content */}
+          <div className="text-white space-y-8 max-w-2xl">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold tracking-tight bmw-fade-in">
                 M4 Coupé
@@ -33,17 +32,6 @@ const HeroSection = () => {
               <Button className="btn-bmw-secondary border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
                 View Specs
               </Button>
-            </div>
-          </div>
-
-          {/* Right Content - Desktop Only */}
-          <div className="hidden lg:block">
-            <div className="relative">
-              <img 
-                src={sideImage} 
-                alt="BMW M4 Coupé Side Profile"
-                className="w-full h-auto object-cover rounded-xl bmw-fade-in"
-              />
             </div>
           </div>
         </div>

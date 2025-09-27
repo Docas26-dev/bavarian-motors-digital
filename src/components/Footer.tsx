@@ -1,3 +1,5 @@
+import bmwLogo from '@/assets/bmw-logo-roundel.png';
+
 const Footer = () => {
   const footerLinks = {
     "About BMW": [
@@ -58,9 +60,11 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex items-center space-x-6">
-              <div className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">BMW</span>
-              </div>
+              <img 
+                src={bmwLogo} 
+                alt="BMW Logo" 
+                className="w-12 h-12 object-contain"
+              />
               <p className="text-primary-foreground/80">
                 © 2024 BMW Group. All rights reserved.
               </p>
