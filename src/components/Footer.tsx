@@ -1,4 +1,4 @@
-import bmwLogo from '@/assets/bmw-logo-roundel-transparent.png';
+import bmwLogo from '@/assets/bmw-logo-footer.png';
 
 const Footer = () => {
   const footerLinks = {
