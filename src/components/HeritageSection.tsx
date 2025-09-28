@@ -1,4 +1,4 @@
-import heritageImage from '@/assets/bmw-heritage.jpg';
+import heritageImage from '@/assets/bmw-e30m3.png';
 
 const HeritageSection = () => {
   return (
