@@ -7,6 +7,7 @@ import HeritageSection from '@/components/HeritageSection';
 import CampaignsSection from '@/components/CampaignsSection';
 import ChargingSection from '@/components/ChargingSection';
 import MeetingsWidget from '@/components/MeetingsWidget';
+import ContactFormSection from '@/components/ContactFormSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -40,6 +41,7 @@ const Index = () => {
             <MeetingsWidget />
           </div>
         </section>
+        <ContactFormSection />
         <FAQSection />
       </main>
       <Footer />
