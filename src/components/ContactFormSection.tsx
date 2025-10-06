@@ -9,10 +9,10 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
-  name: z.string().trim().min(1, 'Nome é obrigatório').max(100, 'Nome muito longo'),
-  email: z.string().trim().email('Email inválido').max(255, 'Email muito longo'),
-  phone: z.string().trim().min(1, 'Telefone é obrigatório').max(20, 'Telefone muito longo'),
-  message: z.string().trim().min(1, 'Mensagem é obrigatória').max(1000, 'Mensagem muito longa'),
+  name: z.string().trim().min(1, 'Name is required').max(100, 'Name too long'),
+  email: z.string().trim().email('Invalid email').max(255, 'Email too long'),
+  phone: z.string().trim().min(1, 'Phone is required').max(20, 'Phone too long'),
+  message: z.string().trim().min(1, 'Message is required').max(1000, 'Message too long'),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -42,8 +42,8 @@ const ContactFormSection = () => {
       }
 
       toast({
-        title: 'Mensagem enviada!',
-        description: 'Entraremos em contato em breve.',
+        title: 'Request submitted!',
+        description: 'We\'ll get back to you soon.',
       });
       
       reset();
@@ -62,17 +62,17 @@ const ContactFormSection = () => {
       <div className="bmw-container">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
-            Entre em Contato
+            Request for Proposal
           </h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">
-            Preencha o formulário e a nossa equipa entrará em contato consigo
+            Fill out the form and our team will get back to you
           </p>
           
           <form onSubmit={handleSubmit(onSubmit)} className="bmw-card p-8 lg:p-12 bg-card">
             <div className="space-y-6">
               <div>
                 <Label htmlFor="name" className="text-foreground">
-                  Nome *
+                  Name *
                 </Label>
                 <Input
                   id="name"
@@ -103,7 +103,7 @@ const ContactFormSection = () => {
 
               <div>
                 <Label htmlFor="phone" className="text-foreground">
-                  Telefone *
+                  Phone *
                 </Label>
                 <Input
                   id="phone"
@@ -118,7 +118,7 @@ const ContactFormSection = () => {
 
               <div>
                 <Label htmlFor="message" className="text-foreground">
-                  Mensagem *
+                  Message *
                 </Label>
                 <Textarea
                   id="message"
@@ -136,7 +136,7 @@ const ContactFormSection = () => {
                 disabled={isSubmitting}
                 className="w-full btn-bmw-primary"
               >
-                {isSubmitting ? 'A enviar...' : 'Enviar Mensagem'}
+                {isSubmitting ? 'Sending...' : 'Submit Request'}
               </Button>
             </div>
           </form>
